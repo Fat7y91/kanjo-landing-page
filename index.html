@@ -111,6 +111,7 @@
         <li><a href="#process" class="hover:text-brand-gold-light transition-colors">آلية الشراكة</a></li>
       </ul>
       <a href="#join" class="hidden sm:inline-flex btn-gold !py-3 !px-6 text-sm">انضم كشريك تجاري</a>
+      <a href="./dashboard.html" class="hidden sm:inline-flex btn-outline-light text-sm !py-3 !px-6">دخول الفريق</a>
       <button id="menuBtn" class="lg:hidden grid place-items-center w-10 h-10 rounded-lg bg-white/10 text-white" aria-label="القائمة">
         <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/></svg>
       </button>
@@ -122,6 +123,7 @@
         <li><a href="#merchants" class="block py-3 border-b border-white/5">للتجار</a></li>
         <li><a href="#process" class="block py-3 border-b border-white/5">آلية الشراكة</a></li>
         <li class="pt-4"><a href="#join" class="btn-gold w-full !py-3.5">انضم كشريك تجاري</a></li>
+        <li class="pt-2"><a href="./dashboard.html" class="btn-outline-light w-full !py-3.5">دخول الفريق</a></li>
       </ul>
     </div>
   </header>
@@ -344,7 +346,7 @@
                   </span>
                   <span class="inline-flex items-center gap-1.5 rounded-full bg-brand-gold/10 border border-brand-gold/25 px-2.5 py-1 text-xs font-bold text-brand-purple">
                     <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" d="M3 10h18M5 6h14a2 2 0 012 2v8a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2zm13.5 5.5h.01"/></svg>
-                    محافظ إلكترونية (فودافون كاش)
+                    محافظ إلكترونية (فودافون، أورانج، اتصالات كاش)
                   </span>
                   <span class="inline-flex items-center gap-1.5 rounded-full bg-brand-gold/10 border border-brand-gold/25 px-2.5 py-1 text-xs font-bold text-brand-purple">
                     <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
@@ -678,25 +680,25 @@
             </div>
           </div>
 
-          <form id="merchantForm" class="mt-8 space-y-5">
+          <form id="lead-form" class="mt-8 space-y-5" name="lead-form">
             <div class="grid sm:grid-cols-2 gap-5">
               <div>
-                <label for="storeName" class="label-form">اسم المتجر / النشاط</label>
-                <input id="storeName" type="text" required placeholder="مثال: مطعم النيل" class="field" />
+                <label for="lead-store-name" class="label-form">اسم المتجر / النشاط</label>
+                <input id="lead-store-name" name="store_name" type="text" required placeholder="مثال: مطعم النيل" class="field" />
               </div>
               <div>
-                <label for="ownerName" class="label-form">اسم صاحب المتجر</label>
-                <input id="ownerName" type="text" required placeholder="الاسم الكامل" class="field" />
+                <label for="lead-owner-name" class="label-form">اسم صاحب المتجر</label>
+                <input id="lead-owner-name" name="owner_name" type="text" required placeholder="الاسم الكامل" class="field" />
               </div>
             </div>
             <div class="grid sm:grid-cols-2 gap-5">
               <div>
-                <label for="phone" class="label-form">رقم الموبايل</label>
-                <input id="phone" type="tel" required placeholder="01xxxxxxxxx" class="field font-num" dir="ltr" />
+                <label for="lead-phone" class="label-form">رقم الموبايل</label>
+                <input id="lead-phone" name="phone" type="tel" required placeholder="01xxxxxxxxx" class="field font-num" dir="ltr" />
               </div>
               <div>
-                <label for="category" class="label-form">فئة المتجر</label>
-                <select id="category" required class="field">
+                <label for="lead-category" class="label-form">فئة المتجر</label>
+                <select id="lead-category" name="category" required class="field">
                   <option value="" disabled selected>اختر الفئة</option>
                   <option>مطعم / كافيه</option>
                   <option>سوبر ماركت / بقالة</option>
@@ -707,14 +709,14 @@
             </div>
             <div class="grid sm:grid-cols-2 gap-5">
               <div>
-                <label for="city" class="label-form">المدينة</label>
-                <select id="city" required class="field">
+                <label for="lead-city" class="label-form">المدينة</label>
+                <select id="lead-city" name="city" required class="field">
                   <option value="desouk" selected>دسوق</option>
                 </select>
               </div>
               <div>
-                <label for="interest" class="label-form">نوع الشراكة</label>
-                <select id="interest" required class="field">
+                <label for="lead-interest" class="label-form">نوع الشراكة</label>
+                <select id="lead-interest" name="interest" required class="field">
                   <option value="" disabled selected>اختر نوع الشراكة</option>
                   <option>انضمام كشريك تجاري</option>
                   <option>طلب زيارة مندوب مبيعات</option>
@@ -806,7 +808,7 @@
       header.classList.toggle('shadow-lg', window.scrollY > 20);
     });
 
-    const form = document.getElementById('merchantForm');
+    const form = document.getElementById('lead-form');
     form.addEventListener('submit', (e) => {
       e.preventDefault();
       form.classList.add('hidden');
